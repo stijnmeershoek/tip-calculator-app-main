@@ -26,6 +26,10 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--light-grayish-cyan);
+
+  display: grid;
+  place-items: center;
+  padding-bottom: 100px;
 }
 
 input[type="number"] {
@@ -92,3 +96,44 @@ button:focus-visible {
 }
 
 /* Tip Component */
+
+#tip-component {
+  background-color: var(--white);
+  border-radius: 25px;
+  width: clamp(50vw, 65vw, 100vw);
+  height: fit-content;
+  padding: 40px;
+  position: relative;
+}
+
+#tip-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 40px;
+}
+
+.tip-amount-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(2, 60px);
+  gap: 10px;
+}
+
+.left label {
+  color: var(--grayish-cyan);
+}
+
+label[for="amount-of-people"] + .text-input, label[for="bill"] + .text-input {
+  margin-top: 10px;
+}
+
+.right {
+  background-color: var(--very-dark-cyan);
+  border-radius: 15px;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
